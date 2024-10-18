@@ -23,10 +23,23 @@ def addNewReceipt():
         if getItem:
             q = int(input('Quantity? '))     
 
-            receipts.append({"barcode": b, "name": getItem['name'], "quantity": q,
-                        "unit_price": getItem['price'], "total_price": (q * getItem['price'])})   
+            alreadyIndex = -1
+            for r in range(0, len(receipts)):
+                if b == receipts[r]['barcode']:
+                    alreadyIndex = r
+                    break
+
+            if alreadyIndex != -1:
+                print('Item already exists... updating quantity and total price')
+                receipts[r]['quantity'] = receipts[r]['quantity'] + q
+                receipts[r]['total_price'] = receipts[r]['quantity'] * receipts[r]['unit_price'] 
+            else:
+                receipts.append({"barcode": b, "name": getItem['name'], "quantity": q,
+                        "unit_price": getItem['price'], "total_price": (q * getItem['price'])})  
             
-            i = input('Another Item ? (yes / no)').strip().lower()
+            
+            
+            i = input('Another Item ? (yes / no): ').strip().lower()
 
             while i not in ['yes', 'no']:
                 i = input('Please choose yes or no: ')
@@ -34,7 +47,7 @@ def addNewReceipt():
             if i == 'no':
                 break 
         else:
-            b = input('Item not found. Other barcode ? (yes / no)').strip().lower()
+            b = input('Item not found. Other barcode ? (yes / no): ').strip().lower()
 
             while b not in ['yes', 'no']:
                 b = input('Please choose yes or no: ')
