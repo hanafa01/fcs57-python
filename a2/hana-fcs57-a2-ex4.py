@@ -3,4 +3,11 @@ words = "Is this the real life? Is this just fantasy? Caught in a landslide, no 
 int1 = int(input("Enter int1: "))
 int2 = int(input("Enter int2: "))
 
-print(words[int1:int2+1])
+# if int1 == int2:
+    # print('please choose two diff numbers')
+if int1 > len(words) or int2 > len(words) :
+    print('Exceeded length')
+else:
+    min = min(int1, int2)
+    max = max(int1, int2)
+    print(words[min:max+1])

@@ -1,7 +1,10 @@
 Names = ["Maria", "Hala", "Ghady", "Ehsan", "Joe", "Zoe"]
 
-x = input("Enter char: ")
+x = input("Enter char: ").strip()
 
-for i in Names:
-  if x in i.lower():
-    print(i)
+if(len(x) == 1):
+  for i in Names:
+    if x.lower() in i.lower():
+      print(i)
+else:
+  print('Please choose one char');
