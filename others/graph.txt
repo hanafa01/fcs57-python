@@ -1,0 +1,80 @@
+Graphs are networks consisting of nodes connected by edges
+
+G = (V, E) , V: vertices / nodes, E: edges / link
+
+Graph can be directed or undirected, weighted or unweighte
+
+undirected: edges have no direction 
+directed: edges have direction 
+weighted: edges hold additional information
+unweighted: edges contain no additional informatio
+
+Matrix Representation: 2d, [[],[],[]], memory-intensive (wasting space), speed better
+Adjacency List Representation: list of LinkedList, or dictionary of lists.  space-efficeint especially fpr sparse graph
+    collection of lists to represent a graph, each list in the collection represents a vertex, and the elements of the list respresent the edges ot that vertex.
+    {'':[],'',[]}
+
+For Matrix: 
+*In undirected add egde:
+add_edge(v1, v2, weightedifany):
+    graph[v1][v2] = 1
+    graph[v2][v1] = 1
+    #graph[v1][v2] = weighted
+    #graph[v2][v1] = weighted
+
+* In directed add edge,
+add_edge(v1, v2, weightedifany):
+    graph[v1][v2] = 1
+    #graph[v1][v2] = weighted
+
+For Adjacency list: 
+*In undirected add egde:
+add_edge(v1, v2, weightedifany):
+    graph[v1].append(v2)
+    graph[v2].append(v1)
+    #graph[v1].append([v2, weighted])
+    #graph[v2].append([v1, weighted])
+
+weighted example
+{'A': [['B', 10], ['C', 30]], [], [] }
+def delete_node(self, v):
+    if v not in self.graph:
+        print(v, 'is not present in the graph')
+    else:
+        self.graph.pop(v)
+        #not weighted
+        for i in self.graph:
+            if v in self.graph[i]:
+                self.graph[i].remove(v)
+        #weighted
+        for i in self.graph:
+            list1 = graph[i]
+            for j in list1:
+                if v == j[0]:
+                    list1.remove(v)
+
+def delete_edge(self, v1, v2):
+    if v1 not in self.graph:
+            print(v1, 'is not present in the graph')
+    elif v2 not in self.graph:
+            print(v2, 'is not present in the graph')
+    else:
+        #unweighted
+        if v2 in self.graph[v1]:
+            self.graph[v1].remove(v2)
+            self.graph[v2].remove(v1)
+        #weighted
+        temp1 = [v1, cost]
+        temp2 = [v2, cost]
+        if temp1 in graph[v1]:
+            self.graph[v1].remove(temp2)
+            self.graph[v2].remove(temp1)
+
+* In directed add edge,
+add_edge(v1, v2, weightedifany):
+    graph[v1].append(v2)
+    #graph[v1].append([v2, weighted])
+
+
+Graph is sparse, many nodes but less edges, with matrix representation, it is wasting space, 
+but in terms of speed, matrix is better
