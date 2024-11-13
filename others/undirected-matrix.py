@@ -18,11 +18,12 @@ class MatrixRepresentationUndirected:
             for n in self.graph:
                 n.append(0)
             
-            temp = []
-            for i in range(self.node_count):
-                temp.append(0)
+            # temp = []
+            # for i in range(self.node_count):
+            #     temp.append(0)
             
-            self.graph.append(temp)
+            # self.graph.append(temp)
+            self.graph.append([0] * self.node_count)
     
     def add_edge(self, v1, v2):
         if v1 not in self.nodes:
@@ -68,6 +69,9 @@ class MatrixRepresentationUndirected:
             for j in range(self.node_count):                  
                 print(self.graph[i][j], end=" ")
             print()
+
+        # for i in self.graph:
+        #     print(i)
 
 um = MatrixRepresentationUndirected()
 # um = MatrixRepresentationUndirected(4)

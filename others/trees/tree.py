@@ -161,6 +161,81 @@ class BST:
                 parent_temp = temp.parent
                 parent_temp.left = None
 
+    def isEmpty(self):
+        return self.root == None
+    
+    def coundNodes(self):
+        return self.helperCountNodes(self.root)
+
+    def helperCountNodes(self, currentNode):
+        if currentNode == None:
+            return 0
+        
+        return 1 + self.helperCountNodes(currentNode.left) + self.helperCountNodes(currentNode.right)
+    
+    def countLeaves(self):
+        return self._countLeaves(self.root)
+
+    def _countLeaves(self, node):
+        if node == None:
+            return 0
+        
+        if node.left == None and node.right == None:
+            return 1 + self._countLeaves(node.left) + self._countLeaves(node.right)
+        else:
+            return 0 + self._countLeaves(node.left) + self._countLeaves(node.right)
+        
+    def height(self):
+        return self._height(self.root)
+
+    def _height(self, node):
+        if node is None:
+            return 0
+        return 1 + max(self._height(node.left), self._height(node.right))
+    
+    def countParentNodes(self):
+      return self._countParentNodes(self.root)
+
+    def _countParentNodes(self, node):
+        if node is None or (node.left is None and node.right is None):
+            return 0
+        return 1 + self._countParentNodes(node.left) + self._countParentNodes(node.right)
+    
+    def countTwoChildren(self):
+      return self._countTwoChildren(self.root)
+
+    def _countTwoChildren(self, node):
+        if node is None:
+            return 0
+        count = 0
+        # if node.left != None and node.right != None:
+        if node.left and node.right:
+            count = 1
+        return count + self._countTwoChildren(node.left) + self._countTwoChildren(node.right)
+
+    def countRightChildren(self):
+      return self._countRightChildren(self.root)
+
+    def _countRightChildren(self, node):
+        if node is None:
+            return 0
+        count = 0
+        if not node.left and node.right:
+            count = 1
+        return count + self._countRightChildren(node.left) + self._countRightChildren(node.right)
+    
+    def isBalanced(self):
+
+        if self.root == None:
+            return True
+
+        l = self._height(self.root.left)
+        r = self._height(self.root.right)
+
+        if abs(l - r) <= 1:
+            return True
+        
+        return False
 
 def inOrder(n):
     if n == None:
@@ -194,10 +269,13 @@ b.add(3)
 b.add(22)
 b.add(11)
 b.add(12)
+b.add(13)
 
-print(b.deleteNode(10))
+# print(b.deleteNode(10))
 print(b.root.value)
 print(b.root.right.left.value)
+print(b.countRightChildren())
+print(b.isBalanced())
 # print(b.search(11))
 
 # inOrder(b.root)

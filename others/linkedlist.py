@@ -39,6 +39,9 @@ class LinkedList:
         if self.head == None:
             return 'LinkedList empty'
         
+        if pos >= self.size:
+            return 'Index is bigger.'
+        
         if pos == 0:
             n = Node(val, self.head)
             self.head = n
@@ -61,7 +64,7 @@ class LinkedList:
 
 
     def remove_at(self, index):
-        if self.head == None or index < 0:
+        if self.head == None or index < 0 or index >= self.size:
             return 
 
         current_node = self.head
@@ -93,13 +96,19 @@ class LinkedList:
             self.size -= 1
             return
 
-        while(current_node != None and current_node.next.val != val):
-            current_node = current_node.next
+        currentNode = self.head
+        prev = None
 
-        if current_node == None:
-            return
-        else:
-            current_node.next = current_node.next.next
+        while currentNode != None and currentNode.val != val:
+            prev = currentNode
+            currentNode = currentNode.next
+                    
+        if currentNode != None:
+            prev.next = currentNode.next
+            self.size -= 1
+            return True
+
+        return False
 
 
     def printll(self):
