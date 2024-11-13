@@ -2,6 +2,15 @@ class ListRepresentationUndirected:
 
     def __init__(self):
         self.graph = {}
+        # self.graph = {
+        #     '5': ['3', '7'],
+        #     '3': ['2', '4'],
+        #     '7': ['8'],
+        #     '2': [],
+        #     '4': ['8'],
+        #     '8': [],
+        # }
+        self.visited = set()
     
     def add_node(self, v):
         if v in self.graph:
@@ -49,6 +58,28 @@ class ListRepresentationUndirected:
                 print(self.graph[i][j], end=" ")
             print()
 
+    def bfs(self, node):
+        visited = []
+        queue = []
+
+        visited.append(node)
+        queue.append(node)
+        while queue:
+            m = queue.pop(0)
+            print(m, end = " ")
+            for n in self.graph[m]:
+                if n not in visited:
+                    visited.append(n)
+                    queue.append(n)
+   
+    def dfs(self, node):
+        if node not in self.visited:
+            print(node, end=" ")
+            self.visited.add(node)
+            for n in self.graph[node]:
+                self.dfs(n)
+
+
 um = ListRepresentationUndirected()
 
 um.add_node('A')
@@ -69,6 +100,7 @@ um.add_edge('E', 'F')
 # um.delete_node('E')
 print(um.graph)
 
-um.delete_edge('E', 'F')
+# um.delete_edge('E', 'F')
 
-print(um.graph)
+# print(um.graph)
+um.bfs('A')
