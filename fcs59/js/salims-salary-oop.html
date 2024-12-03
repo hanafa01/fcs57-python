@@ -1,0 +1,47 @@
+<script>
+
+    class FinanceManager {
+        constructor() {
+            this.salary = 3000
+            this.month = "October"
+            this.expenses = {
+                'Savings': 20,
+                'Rent': 40,
+                'Electricity': 10
+            }
+        }
+    
+        input_store_salary_month() {
+            this.salary = parseFloat(prompt('Enter your salary: '))
+            this.month = prompt('Enter your month\'s salary: ')
+    
+            console.log(`Salary is ${this.salary} for ${this.month}`)
+        }
+    
+        add_expense() {
+            const category = prompt('Enter expense category name (eg savings, rent, electricity): ')
+            const percentage = parseFloat(prompt('Enter the percentage: '))
+    
+            if (percentage <= 0 || percentage > 100) {
+                console.log("Percentage must be between 0 and 100.")
+                return
+            }
+    
+            let sumExistingExpenses = 0
+            for (let x in this.expenses) {
+                sumExistingExpenses += this.expenses[x]
+            }
+    
+            if (sumExistingExpenses + percentage > 100) {
+                console.log("Total expense percentages cannot exceed 100%.")
+                return
+            }
+    
+            this.expenses[category] = percentage
+        }
+    
+    }
+    
+    s = new FinanceManager()
+    s.add_expense()
+</script>

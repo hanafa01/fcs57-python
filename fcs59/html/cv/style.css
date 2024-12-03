@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background: #cecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 40px 60px;
+}
+
+.about-me {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-me h2 {
+  line-height: 1.6;
+}
+
+.details {
+  background: #00ced1;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+
+.details span {
+  text-decoration: underline;
+}
+
+.title {
+  background: #00ced1;
+  padding: 10px 0 10px 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.exp ul section {
+  margin-top: 20px;
+}
+
+.exp .exp-details {
+  padding: 0;
+  list-style: none;
+}
+
+.exp .exp-details span {
+  font-size: 17px;
+}
+
+.exp .exp-details ul {
+  padding-left: 45px;
+}
+
+.exp .exp-details ul li {
+  margin: 10px 0;
+}
+
+section {
+  margin-top: 20px;
+}
+section p {
+  line-height: 1.6;
+}
