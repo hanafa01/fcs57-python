@@ -12,4 +12,4 @@ def first_missing_positive(l1):
     return missing
 
 
-print(first_missing_positive([1,2,0]))
+print(first_missing_positive([1,2,3]))

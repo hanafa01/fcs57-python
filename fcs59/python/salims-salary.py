@@ -53,6 +53,6 @@ class FinanceManager:
         print(f"Total salary squared for fun: ${self.salary ** 2:.2f}")
 
 manager = FinanceManager()
-manager.input_salary_and_month()
-manager.add_expense_category()
+# manager.input_salary_and_month()
+# manager.add_expense_category()
 manager.calculate_allocations()

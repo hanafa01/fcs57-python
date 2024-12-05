@@ -1,11 +1,12 @@
+function max_profit(prices){
+    let profits = []
+    for(let i = 1; i<prices.length; i++){
+        if(prices[i] > prices[i-1]){
+            profits.push(prices[i] - prices[i-1])
+        }
+    }
 
-def max_profit(prices):
+    return Math.max(profits)
+}
 
-    profits = []
-    for i in range(1, len(prices)):
-        if prices[i] > prices[i-1]:
-            profits.append(prices[i] - prices[i-1])
-
-    return max(profits)
-
-print(max_profit([5, 7, 2]))
+console.log(max_profit([5,7,2]))
