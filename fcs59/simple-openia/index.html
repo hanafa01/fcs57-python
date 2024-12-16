@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container navbar">
+        <div class="logo hide">
+          <a href="#">OpenAI</a>
+        </div>
+        <nav class="hide">
+          <a href="#">Research</a>
+          <a href="#">Products</a>
+          <a href="#">Safety</a>
+          <a href="#">Company</a>
+        </nav>
+        <div>
+          <a href="#" class="hide"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a class="humb" onclick="showS()"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <li onclick="hideS()">
+            <a><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="#">OpenAI</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Research</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="sliders-section">
+        <div class="slides-imgs">
+          <div class="slides">
+            <div class="content">
+              <h1>12 Days of OpenAI</h1>
+              <p>Continuing Monday at 10am PT.</p>
+              <a href="#" class="btn-white">Learn more</a>
+            </div>
+          </div>
+          <div class="slides">
+            <div class="content">
+              <h1>Sora</h1>
+              <p>Lorem ipsum dolor sit.</p>
+              <a href="#" class="btn-white">Learn more</a>
+            </div>
+          </div>
+          <div class="slides">
+            <div class="content">
+              <h1>Open AI o1</h1>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <a href="#" class="btn-white">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="slides-dots">
+          <span class="slides-button" onclick="currentDiv(1)">
+            <i class="fa-regular fa-circle demo"></i>
+          </span>
+          <span class="slides-button" onclick="currentDiv(2)">
+            <i class="fa-regular fa-circle demo"></i>
+          </span>
+          <span class="slides-button" onclick="currentDiv(3)">
+            <i class="fa-regular fa-circle demo"></i>
+          </span>
+        </div>
+      </section>
+
+      <section class="product-slider">
+        <div class="slider-heading">
+          <h3>Products</h3>
+        </div>
+
+        <div style="display: flex">
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+          <div class="product-box">
+            <a href="">
+              <img src="./images/Sora-systems_blog_card_v1.webp" alt="" />
+              <div class="buy-price">
+                <p>Lorem ipsum dolor sit.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-section">
+        <div class="info-content">
+          <h1>Instant answers. Greater productivity. Endless inspiration.</h1>
+          <div class="button-div">
+            <a href="#" class="btn-white">Try ChatGPT <i></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-1">
+        <div class="footer-column">
+          <h4>Lorem</h4>
+          <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Lorem</h4>
+          <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Lorem</h4>
+          <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Lorem</h4>
+          <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Lorem</h4>
+          <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container flex footer-2">
+        <div class="copyright">
+          <span>OpenAI @ 2015-2024</span>
+          <a href="">Manage Cookies</a>
+        </div>
+        <div class="social">
+          <a href=""><i class="fa-brands fa-x"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-tiktok"></i></a>
+          <a href=""><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showS() {
+        const s = document.querySelector(".sidebar");
+
+        s.style.display = "flex";
+      }
+
+      function hideS() {
+        const s = document.querySelector(".sidebar");
+
+        s.style.display = "none";
+      }
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs((slideIndex += n));
+      }
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("slides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(
+            " fa-solid fa-circle",
+            ""
+          );
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " fa-solid fa-circle";
+      }
+    </script>
+  </body>
+</html>
